@@ -9,7 +9,6 @@
     --advice-container: hsl(217, 19%, 24%);
     --primary-text-color: hsl(193, 38%, 86%);
     --secondary-text-color: hsl(150, 100%, 66%);
-
     --primary-font:  "Manrope", sans-serif;
 }
 
@@ -28,40 +27,46 @@ body {
 
 .advice-container {
     position: relative;
-    display: flex;
     align-self: center;
+    display: flex;
     flex-direction: column;
     width: 90%;
     height: auto;
     min-height: 250px;
-    padding: 50px 20px 70px;
     margin: 0 auto;
+    padding: 50px 20px 70px;
+    text-align: center;
     background-color: var(--advice-container);
     border-radius: 10px;
-    text-align: center;
 }
-.advice-container h2 {
+.advice-container__title {
     align-self: center;
     font-size: 1.2rem;
     letter-spacing: 1px;
     color: var(--secondary-text-color);
 }
-.advice-container p {
+.advice-container__phrase {
     margin: 20px 0 40px;
     font-size: 2.4rem;
     font-weight: 800;
     color: var(--primary-text-color);
 }
-
+.advice-container__pattern {
+    width: 100%;
+    height: auto;
+}
 
 .button {
     position: absolute;
     bottom: -40px;
     align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 80px;
     height: 80px;
-    border-radius: 50%;
     border: none;
+    border-radius: 50%;
     background-color: var(--secondary-text-color);
 }
 
@@ -74,4 +79,33 @@ body {
 }
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+}
+
+@media (min-width: 600px) {
+    .advice-container {
+        max-width: 650px;
+        min-height: 400px;
+        padding: 60px 80px;
+    }
+    .advice-container__title {
+        font-size: 1.6rem;
+        letter-spacing: 5px;
+    }
+    .advice-container__phrase {
+        font-size: 2.8rem;
+        letter-spacing: 1px;
+    }
+
+    .button {
+        transition: all 0.3s;
+    }
+    button:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+        box-shadow: 0px 0px 50px 0px var(--secondary-text-color);
+    }
+
+    .attribution {
+        font-size: 2rem;
+    }
 }
