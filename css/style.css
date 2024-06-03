@@ -70,8 +70,15 @@ body {
     background-color: var(--secondary-text-color);
 }
 
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+}
+
 .attribution { 
-    align-self: flex-end;
     margin-bottom: 20px;
     font-size: 1.1rem; 
     text-align: center; 
