@@ -18,5 +18,5 @@ async function randomAdvice() {
     const data = await fetchData(URL);
 
     adviceId.innerText = `ADVICE #${data.slip.id}`;
-    adviceContainer.innerText = `${data.slip.advice}`;
+    adviceContainer.innerText = `"${data.slip.advice}"`;
 };
