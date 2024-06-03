@@ -4,6 +4,7 @@ const button = document.querySelector('#button');
 
 const URL = 'https://api.adviceslip.com/advice';
 
+document.addEventListener('DOMContentLoaded', randomAdvice);
 button.addEventListener('click', randomAdvice);
 
 async function fetchData(url) {
